@@ -10,14 +10,8 @@ test:
 	@echo "Running unit tests..."
 	python3 -m unittest -v WordFrequencyTest.py
 
-run: install test
-ifdef pageid
-ifdef n
+run: install flake test
 	python3 WordFrequency.py --pageid $(pageid) -n $(n)
-endif
-endif
-ifndef pageid
-ifndef n
+
+default: install flake test
 	python3 WordFrequency.py
-endif
-endif
