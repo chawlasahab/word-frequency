@@ -65,6 +65,10 @@ def generate_output(title, sorted_word_count_list, n):
 
 
 if __name__ == '__main__':
+    """
+    usage:
+        python3 WordFrequency.py --pageid 21721040 -n 5
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("--pageid", "-id", type=int, default=21721040)
     parser.add_argument("--n", "-n", type=int, default=5)
